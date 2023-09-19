@@ -102,10 +102,12 @@ public class AppTest {
       String actualOutput = outStream.toString();
       String cleanActualOutput = normalizeString(actualOutput);
 
-      assertTrue(cleanActualOutput.contains(normalizeString(EXPECTED_TEXT_TO_TYPE_ACTIVITY_QUANTITY)));
+      assertTrue(
+          cleanActualOutput.contains(normalizeString(EXPECTED_TEXT_TO_TYPE_ACTIVITY_QUANTITY)));
       for (int i = 1; i <= activityQuantity; i++) {
-        String expectedOutput = EXPECTED_TEXT_TO_TYPE_ACTIVITY_NAME + i + EXPECTED_TEXT_TO_TYPE_ACTIVITY_WEIGHT
-            + i;
+        String expectedOutput =
+            EXPECTED_TEXT_TO_TYPE_ACTIVITY_NAME + i + EXPECTED_TEXT_TO_TYPE_ACTIVITY_WEIGHT
+                + i;
         String cleanExpectedOutput = normalizeString(expectedOutput);
         assertTrue(cleanActualOutput.contains(cleanExpectedOutput));
       }
@@ -121,7 +123,7 @@ public class AppTest {
   @Test
   @DisplayName("2 - Insere as notas com sucesso.")
   public void testInsereNotas() {
-    String input = """ 
+    String input = """
         2
         Exercício Alfa
         40
@@ -143,7 +145,8 @@ public class AppTest {
 
       String actualOutput = outStream.toString();
       String cleanActualOutput = normalizeString(actualOutput);
-      assertTrue(cleanActualOutput.contains(normalizeString(EXPECTED_TEXT_TO_TYPE_ACTIVITY_QUANTITY)));
+      assertTrue(
+          cleanActualOutput.contains(normalizeString(EXPECTED_TEXT_TO_TYPE_ACTIVITY_QUANTITY)));
       for (String projectName : activitiesNames) {
         String expectedOutput = EXPECTED_TEXT_TO_TYPE_ACTIVITY_GRADE + projectName;
         String cleanExpectedOutput = normalizeString(expectedOutput);
@@ -161,7 +164,7 @@ public class AppTest {
   @Test
   @DisplayName("3 - Emite o resultado correto quando há aprovação.")
   public void testEmiteResultadoAprovado() {
-    String input = """ 
+    String input = """
         2
         Exercício Alfa
         40
@@ -191,14 +194,13 @@ public class AppTest {
       System.setOut(sysOutBackup);
     }
   }
-
   /**
    * testEmiteResultadoReprovado
    */
   @Test
   @DisplayName("4 - Emite o resultado correto quando há reprovação.")
   public void testEmiteResultadoReprovado() {
-    String input = """ 
+    String input = """
         2
         Exercício Alfa
         40
