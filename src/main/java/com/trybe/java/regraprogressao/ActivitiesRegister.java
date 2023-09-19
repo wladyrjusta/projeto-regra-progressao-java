@@ -11,8 +11,8 @@ public class ActivitiesRegister {
   /**
    * Este método permite ao usuário cadastrar atividades avaliativas para o período atual. Cada
    * atividade deve ter um nome descritivo e um peso atribuído a ela. O método solicitará a
-   * quantidade de atividades a serem cadastradas e, em seguida, coletará os nomes e pesos de cada
-   * atividade.
+   * quantidade de atividades a serem cadastradas e, em seguida, coletará os nomes, pesos
+   * e notas de cada atividade.
    */
   public static void register() {
     Scanner scanner = new Scanner(System.in);
